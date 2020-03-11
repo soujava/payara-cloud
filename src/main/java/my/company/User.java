@@ -10,6 +10,7 @@ import javax.money.MonetaryAmount;
 import java.time.LocalDate;
 import java.util.Collections;
 import java.util.List;
+import java.util.Objects;
 
 @Entity
 public class User {
@@ -36,7 +37,7 @@ public class User {
     }
 
     public List<String> getLanguages() {
-        if(languages == null) {
+        if (languages == null) {
             return Collections.emptyList();
         }
         return Collections.unmodifiableList(languages);
@@ -48,5 +49,32 @@ public class User {
 
     public void update(User update) {
 
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        User user = (User) o;
+        return Objects.equals(nickname, user.nickname);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(nickname);
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "nickname='" + nickname + '\'' +
+                ", salary=" + salary +
+                ", languages=" + languages +
+                ", birthday=" + birthday +
+                '}';
     }
 }
