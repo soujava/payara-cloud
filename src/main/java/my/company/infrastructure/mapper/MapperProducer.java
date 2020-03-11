@@ -25,7 +25,6 @@ public class MapperProducer implements Supplier<ModelMapper> {
         this.mapper.addConverter(new MonetaryAmountStringConverter());
         this.mapper.addConverter(new StringLocalDateConverter());
         this.mapper.addConverter(new LocalDateStringConverter());
-        this.mapper.addConverter(new UserDTOConverter());
     }
 
 

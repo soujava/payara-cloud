@@ -10,6 +10,7 @@ import javax.money.MonetaryAmount;
 import java.time.LocalDate;
 import java.util.Collections;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 
 @Entity
@@ -28,6 +29,9 @@ public class User {
     @Column
     private LocalDate birthday;
 
+    @Column
+    private Map<String, String> settings;
+
     public String getNickname() {
         return nickname;
     }
@@ -45,6 +49,13 @@ public class User {
 
     public LocalDate getBirthday() {
         return birthday;
+    }
+
+    public Map<String, String> getSettings() {
+        if (settings == null) {
+            return Collections.emptyMap();
+        }
+        return Collections.unmodifiableMap(settings);
     }
 
     public void update(User update) {
@@ -75,6 +86,7 @@ public class User {
                 ", salary=" + salary +
                 ", languages=" + languages +
                 ", birthday=" + birthday +
+                ", settings=" + settings +
                 '}';
     }
 }
