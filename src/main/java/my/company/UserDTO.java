@@ -1,9 +1,6 @@
 package my.company;
 
-import javax.money.MonetaryAmount;
-import java.time.LocalDate;
 import java.util.List;
-import java.util.Map;
 
 public class UserDTO {
 
@@ -45,15 +42,5 @@ public class UserDTO {
 
     public void setBirthday(String birthday) {
         this.birthday = birthday;
-    }
-
-    @Override
-    public String toString() {
-        return "UserDTO{" +
-                "nickname='" + nickname + '\'' +
-                ", salary='" + salary + '\'' +
-                ", languages=" + languages +
-                ", birthday='" + birthday + '\'' +
-                '}';
     }
 }

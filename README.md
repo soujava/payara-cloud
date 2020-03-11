@@ -36,6 +36,6 @@ Follow the instructions in: https://docs.mongodb.com/manual/installation/
 ## Run the tests
 
 
-* `curl -X POST -H 'Content-Type: application/json' -i http://localhost:8080/users --data '{"birthday":"2020-03-10","languages":["Portuguese"],"nickname":"otaviojava","salary":"USD 10000","settings":{"key":"value"}}'`
-* `curl -X POST -H 'Content-Type: application/json' -i http://localhost:8080/users --data '{"birthday":"1980-03-10","languages":["Portuguese", "English"],"nickname":"elderjava","salary":"EUR 100000","settings":{"key":"value"}}'`
-* `{"birthday":"1800-03-10","languages":["Portuguese", "English"],"nickname":"brjavamana","salary":"USD 100000000","settings":{"key":"value"}}`
+* `curl -X POST -H 'Content-Type: application/json' -i http://localhost:8080/users --data '{"birthday":"2020-03-10","languages":["Portuguese"],"nickname":"otaviojava","salary":"USD 10000"}'`
+* `curl -X POST -H 'Content-Type: application/json' -i http://localhost:8080/users --data '{"birthday":"1980-03-10","languages":["Portuguese", "English"],"nickname":"elderjava","salary":"EUR 100000"}'`
+* `{"birthday":"1800-03-10","languages":["Portuguese", "English"],"nickname":"brjavamana","salary":"USD 100000000"}`

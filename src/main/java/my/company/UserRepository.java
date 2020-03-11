@@ -7,7 +7,5 @@ import java.util.stream.Stream;
 
 @ApplicationScoped
 public interface UserRepository extends Repository<User, String> {
-
     Stream<User> findAll();
-
 }
